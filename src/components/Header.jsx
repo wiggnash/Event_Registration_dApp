@@ -20,12 +20,12 @@ const connectWallet = async () => {
     console.log(accounts);
     const accountAddress = document.getElementById("connect-wallet");
     accountAddress.innerHTML = accounts;
-
 }
+
 const Header = () => {
   return (
     <div>
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary pt-4 pb-4" data-bs-theme="dark">
       <Container fluid>
         <Navbar.Brand href="#">dApp Events</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -38,7 +38,7 @@ const Header = () => {
             <Nav.Link href="#action1">Home</Nav.Link>
             <Nav.Link href="#action2">Events</Nav.Link>
           </Nav>
-          <Button variant="primary" id="connect-wallet" onClick={connectWallet}>Connect Wallet</Button>
+          <Button variant="primary" id="connect-wallet" onClick={connectWallet} className='mx'>Connect Wallet</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
